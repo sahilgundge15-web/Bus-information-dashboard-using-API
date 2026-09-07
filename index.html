@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Information Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <h1><i class="fa-solid fa-bus"></i> Bus Dashboard</h1>
+            <p>Real-time transit information system</p>
+        </div>
+        <button id="refreshBtn"><i class="fa-solid fa-rotate"></i> Refresh Data</button>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="searchInput" type="search" placeholder="Search by bus number, route, source or destination...">
+            </div>
+            <select id="statusFilter">
+                <option value="all">All Status</option>
+                <option value="On Time">On Time</option>
+                <option value="Delayed">Delayed</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>Total Buses</span>
+                    <strong id="totalBuses">0</strong>
+                </div>
+                <i class="fa-solid fa-bus-simple stat-icon total"></i>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>On Time</span>
+                    <strong id="onTime">0</strong>
+                </div>
+                <i class="fa-solid fa-circle-check stat-icon on-time"></i>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>Delayed</span>
+                    <strong id="delayedBuses">0</strong>
+                </div>
+                <i class="fa-solid fa-triangle-exclamation stat-icon delayed"></i>
+            </div>
+        </section>
+
+        <section class="bus-list-section">
+            <div class="table-container">
+                <table id="busTable">
+                    <thead>
+                        <tr>
+                            <th>Bus No</th>
+                            <th>Route</th>
+                            <th>Source</th>
+                            <th>Destination</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="busTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
