@@ -1,13 +1,26 @@
 // Local fallback dataset if API fails
 const fallbackBuses = [
-    { number: "301", route: "Pune-Mumbai Express", source: "pune", destination: "Mumbai", status: "On Time" },
-     { number: "105", route: "Pune-Satara Superfast", source: "pune", destination: "Mumbai", status: "On Time" },
-    { number: "101", route: "City Center - Station", source: "Main Stand", destination: "Railway Station", status: "On Time" },
-    { number: "202", route: "Airport - IT Park", source: "Airport", destination: "Tech Park", status: "Delayed" },
-    { number: "303", route: "Market - University", source: "Central Market", destination: "University Gate", status: "Cancelled" },
-    { number: "404", route: "Suburbs - Downtown", source: "West End", destination: "City Center", status: "On Time" }
+    { number: "MH-01-AB-1001", route: "Mumbai - Pune", source: "Mumbai", destination: "Pune", status: "On Time" },
+    { number: "MH-02-CD-1002", route: "Pune - Mumbai", source: "Pune", destination: "Mumbai", status: "Running" },
+    { number: "MH-03-EF-1003", route: "Mumbai - Nashik", source: "Mumbai", destination: "Nashik", status: "On Time" },
+    { number: "MH-04-GH-1004", route: "Nashik - Pune", source: "Nashik", destination: "Pune", status: "Delayed" },
+    { number: "MH-05-JK-1005", route: "Pune - Kolhapur", source: "Pune", destination: "Kolhapur", status: "On Time" },
+    { number: "MH-06-LM-1006", route: "Kolhapur - Sangli", source: "Kolhapur", destination: "Sangli", status: "Running" },
+    { number: "MH-07-NP-1007", route: "Nagpur - Amravati", source: "Nagpur", destination: "Amravati", status: "On Time" },
+    { number: "MH-08-QR-1008", route: "Aurangabad - Pune", source: "Aurangabad", destination: "Pune", status: "Delayed" },
+    { number: "MH-09-ST-1009", route: "Mumbai - Thane", source: "Mumbai", destination: "Thane", status: "On Time" },
+    { number: "MH-10-UV-1010", route: "Thane - Navi Mumbai", source: "Thane", destination: "Navi Mumbai", status: "Running" },
+    { number: "MH-11-WX-1011", route: "Pune - Satara", source: "Pune", destination: "Satara", status: "On Time" },
+    { number: "MH-12-YZ-1012", route: "Pune - Ahmednagar", source: "Pune", destination: "Ahmednagar", status: "Delayed" },
+    { number: "MH-13-AA-1013", route: "Solapur - Pune", source: "Solapur", destination: "Pune", status: "On Time" },
+    { number: "MH-14-BB-1014", route: "Nashik - Mumbai", source: "Nashik", destination: "Mumbai", status: "Running" },
+    { number: "MH-15-CC-1015", route: "Ratnagiri - Mumbai", source: "Ratnagiri", destination: "Mumbai", status: "On Time" },
+    { number: "MH-16-DD-1016", route: "Raigad - Mumbai", source: "Raigad", destination: "Mumbai", status: "Cancelled" },
+    { number: "MH-17-EE-1017", route: "Chandrapur - Nagpur", source: "Chandrapur", destination: "Nagpur", status: "On Time" },
+    { number: "MH-18-FF-1018", route: "Dhule - Nashik", source: "Dhule", destination: "Nashik", status: "Running" },
+    { number: "MH-19-GG-1019", route: "Akola - Nagpur", source: "Akola", destination: "Nagpur", status: "Delayed" },
+    { number: "MH-20-HH-1020", route: "Jalgaon - Aurangabad", source: "Jalgaon", destination: "Aurangabad", status: "On Time" }
 ];
-
 let allBuses = [];
 
 // Fetch data from a live REST API placeholder (or fallback gracefully)
